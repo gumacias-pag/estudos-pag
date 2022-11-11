@@ -30,12 +30,17 @@ public class Main {
         Main main = new Main();
 
         JFrame tela = new JFrame("Calculadora");
-        JPanel painel = new JPanel();
-        painel.setLayout(new GridBagLayout());
-        painel.setSize(300, 400);
         tela.setSize(300, 400);
-        tela.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //quando fechar a tela o programa termina
-        JTextField display = new JTextField(300);
+        tela.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);////quando fechar a tela o programa termina
+
+        JPanel painel = new JPanel();
+        painel.setLayout(new FlowLayout());
+        painel.setSize(300, 400);
+
+        JTextField display = new JTextField("Teste");
+        display.setPreferredSize(new Dimension(290, 100));
+        display.setSize(290,50);
+
         JButton botao1 = new JButton("1");
         painel.add(display);
         painel.add(botao1);
